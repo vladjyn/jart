@@ -46,6 +46,9 @@ public class Circle implements Drawable {
 
     // Méthodes
     public static Circle random(int width, int height) {
+        if (width <= 0 || height <= 0) {
+            throw new IllegalArgumentException("Invalid image size");
+        }
         Point center = Point.random(width, height);
         int radius = (int) (Math.random() * width / 10);
         return new Circle(center, radius);

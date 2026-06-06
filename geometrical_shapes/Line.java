@@ -10,6 +10,9 @@ public class Line implements Drawable {
 
     // constructeur
     public Line(Point p1, Point p2) {
+        if (p1 == null || p2 == null) {
+            throw new IllegalArgumentException("Points cannot be null");
+        }
         this.p1 = p1;
         this.p2 = p2;
         this.color = new Color(
@@ -19,6 +22,9 @@ public class Line implements Drawable {
     }
 
     public static Line random(int width, int height) {
+        if (width <= 0 || height <= 0) {
+            throw new IllegalArgumentException("Invalid image size");
+        }
         Point p1 = Point.random(width, height);
         Point p2 = Point.random(width, height);
         return new Line(p1, p2);

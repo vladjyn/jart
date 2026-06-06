@@ -29,6 +29,10 @@ public class Image implements Displayable {
     }
 
     public void display(int x, int y, Color color) {
+        if (color == null) {
+            throw new IllegalArgumentException("Color cannot be null");
+        }
+
         if (x < 0 || x >= width || y < 0 || y >= height) {
             return;
         }
