@@ -1,5 +1,7 @@
 package geometrical_shapes;
 
+import java.util.Random;
+
 public class Point {
 
     private int x;
@@ -11,5 +13,19 @@ public class Point {
     }
 
     public static Point random(int width, int height) {
+        Random random = new Random();
+
+        int x = random.nextInt(width);
+        int y = random.nextInt(height);
+
+        return new Point(x, y);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 }
