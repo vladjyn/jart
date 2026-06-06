@@ -1,4 +1,5 @@
 package jart.geometrical_shapes;
+import java.awt.Color;
 
 public class Triangle implements Drawable {
     // Attributs
