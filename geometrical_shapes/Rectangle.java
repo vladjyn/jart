@@ -7,49 +7,32 @@ public class Rectangle implements Drawable {
     private Point bottomRight;
     private Color color;
 
-    // Constructeurs
-    public Rectangle() {
-        this.topLeft = new Point(0, 0);
-        this.topLeft = new Point(1, 1);
-    }
-
+    // Constructeur
     public Rectangle(Point topLeft, Point bottomRight) {
         this.topLeft = topLeft;
         this.bottomRight = bottomRight;
+        this.color = new Color(
+        (int)(Math.random() * 255),
+        (int)(Math.random() * 255),
+        (int)(Math.random() * 255)
+    );
     }
 
-    // Setters
-    public void setTopLeft(Point coord) {
-        this.topLeft = coord;
-    }
-
-    public void setp3(Point coord) {
-        this.bottomRight = coord;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-    // Getters
-    public Point getTopLeft() {
-        return this.topLeft;
-    }
-
-    public Point getp3() {
-        return this.bottomRight;
-    }
-
+    // Getters & setters
+    public Point getTopLeft() {return this.topLeft;}
+    public Point getBottomRight() {return this.bottomRight;}
      @Override
-    public Color getColor() {
-        return this.color;
-    }
+    public Color getColor() {return this.color;}
+
+    public void setTopLeft(Point coord) {this.topLeft = coord;}
+    public void setBottomRight(Point coord) {this.bottomRight = coord;}
+    public void setColor(Color color) {this.color = color;}
     
-    // Fonctions
+    // Méthodes
     @Override
     public void draw(Displayable displayable) {
-        Point topRight = new Point(this.topLeft.getX(), this.bottomRight.getY());
-        Point bottomLeft = new Point(this.bottomRight.getX(), this.topLeft.getY());
+        Point bottomLeft = new Point(this.topLeft.getX(), this.bottomRight.getY());
+        Point topRight = new Point(this.bottomRight.getX(), this.topLeft.getY());
 
         new Line (topLeft, topRight).draw(displayable);
         new Line (topRight, bottomRight).draw(displayable);
