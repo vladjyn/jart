@@ -12,6 +12,9 @@ public class Image implements Displayable {
     private BufferedImage image;
 
     public Image(int width, int height) {
+        if (width <= 0 || height <= 0) {
+            throw new IllegalArgumentException("Width and height must be positive");
+        }
         this.width = width;
         this.height = height;
         this.image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);

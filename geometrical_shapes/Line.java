@@ -8,10 +8,14 @@ public class Line implements Drawable {
     private Point p2;
     private Color color;
 
+    // constructeur
     public Line(Point p1, Point p2) {
         this.p1 = p1;
         this.p2 = p2;
-        this.color = Color.WHITE;
+        this.color = new Color(
+                (int) (Math.random() * 255),
+                (int) (Math.random() * 255),
+                (int) (Math.random() * 255));
     }
 
     public static Line random(int width, int height) {
@@ -59,6 +63,6 @@ public class Line implements Drawable {
 
     @Override
     public Color getColor() {
-        return color;
+        return this.color;
     }
 }
