@@ -10,13 +10,11 @@ public class Rectangle implements Drawable {
     public Rectangle() {
         this.topLeft = new Point(0, 0);
         this.topLeft = new Point(1, 1);
-        this.color = "#FFFFFF";
     }
 
-    public Rectangle(Point p1, Point p3, Color color) {
-        this.topLeft = p1;
-        this.bottomRight = p3;
-        this.color = color;
+    public Rectangle(Point topLeft, Point bottomRight) {
+        this.topLeft = topLeft;
+        this.bottomRight = bottomRight;
     }
 
     // Setters

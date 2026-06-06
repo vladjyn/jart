@@ -12,14 +12,12 @@ public class Triangle implements Drawable {
         this.top = new Point(0, 0);
         this.left = new Point(1, 1);
         this.right = new Point(2, 2);
-        this.color = "#FFFFFF";
     }
 
-    public Triangle(Point top, Point left, Point right, Color color) {
+    public Triangle(Point top, Point left, Point right) {
         this.top = top;
         this.left = left;
         this.right = right;
-        this.color = color;
     }
 
     // Setters
