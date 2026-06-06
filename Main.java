@@ -1,16 +1,8 @@
-package geometrical_shapes;
-
-interface Displayable {
-    void display(int x, int y, Color color);
-
-    void save(String string);
-}
-
-interface Drawable {
-    void draw(Displayable displayable);
-
-    Color getColor();
-}
+import geometrical_shapes.Image;
+import geometrical_shapes.Rectangle;
+import geometrical_shapes.Point;
+import geometrical_shapes.Triangle;
+import geometrical_shapes.Circle;;
 
 public class Main {
     public static void main(String[] args) {
