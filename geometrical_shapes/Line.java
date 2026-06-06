@@ -1,7 +1,6 @@
 package geometrical_shapes;
 
 import java.awt.Color;
-import java.util.Random;
 
 public class Line implements Drawable {
 
