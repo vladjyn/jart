@@ -1,4 +1,4 @@
-package geometrical_shapes;
+package jart;
 
 interface Displayable {
     void display(int x, int y, Color color);

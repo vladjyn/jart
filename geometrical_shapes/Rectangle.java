@@ -1,4 +1,4 @@
-package geometrical_shapes;
+package jart.geometrical_shapes;
 
 public class Rectangle implements Drawable {
     // Attributs

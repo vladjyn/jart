@@ -1,4 +1,4 @@
-package geometrical_shapes;
+package jart.geometrical_shapes;
 
 public class Circle implements Drawable {
     public Circle(Point center, int radius) {
